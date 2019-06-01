@@ -14,6 +14,21 @@ export PATH="$PATH:$HOME/Scripts/:$PATH"
 export PATH="$PATH:$HOME/Scripts/wicked_cool_shell_scripts/01_Missing_Code/:$PATH"
 export PATH="$PATH:$HOME/Scripts/data_hoarding/Auto-youtube-dl/:$PATH"
 
+# Color codes output from "less"
+# Taken from https://superuser.com/questions/117841/get-colors-in-less-or-more
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
+
+# Color codes man pages.
+# Taken from https://www.tecmint.com/view-colored-man-pages-in-linux/
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -157,6 +172,9 @@ alias update-full='sudo apt-get update && sudo apt-get upgrade && sudo apt-get d
 alias redshift0='redshift -O 4700k &'
 alias redshift1='redshift -O 3000k &'
 alias grep='grep -i'
+alias python='python3'
+alias pingGoogleIP='ping 8.8.8.8'
+alias pingGoogle='ping www.google.com'
 
 #screenfetch
 tmux
